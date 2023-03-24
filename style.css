@@ -1,1 +1,651 @@
 
+*{
+    margin: 0;
+    padding: 0;
+ }
+
+ :root{
+    --color-txt: #fff;
+    --color-second-txt: #db0d15;
+    --color-hover: #db0d15;
+    --color-bg-header: #000;
+    --color-bg-footer: #171717;
+    --color-btn: #db0d15;
+    --color-round-header: #db0d15;
+ }
+
+html {
+    scroll-behavior: smooth;
+}
+
+/*  fonts */
+
+@font-face {
+    font-family: "proximanovaex bold";
+    src: url('/fonts/Demo_Fonts/Fontspring-DEMO-proximanovaexcn-bold.otf') format("opentype");
+}
+
+@font-face {
+    font-family: "proximanovaex exbold";
+    src: url('/fonts/Demo_Fonts/Fontspring-DEMO-proximanovaexcn-extrabold.otf') format("opentype");
+}
+
+@font-face {
+    font-family: 'proximanovaex black';
+    src: url('/fonts/Demo_Fonts/Fontspring-DEMO-proximanovaexcn-black.otf') format("opentype");
+}
+
+@font-face {
+    font-family: 'proximanovaex regular';
+    src: url('/fonts/Demo_Fonts/Fontspring-DEMO-proximanovaexcn-regular.otf') format("opentype");
+}
+
+@font-face {
+    font-family: 'proximanova normal';
+    src: url('/fonts/Demo_Fonts/Fontspring-DEMO-proximanova-regular.otf') format("opentype");
+}
+
+@font-face {
+    font-family: 'proximanova semibold';
+    src: url('/fonts/Demo_Fonts/Fontspring-DEMO-proximanova-semibold.otf') format("opentype");
+}
+
+@font-face {
+    font-family: 'proximanovacond bold';
+    src: url('/fonts/Demo_Fonts/Fontspring-DEMO-proximanovacond-bold.otf') format("opentype");
+}
+
+@font-face {
+    font-family: 'proximanovacond exbold';
+    src: url('/fonts/Demo_Fonts/Fontspring-DEMO-proximanovacond-extrabold.otf') format("opentype");
+}
+
+@font-face {
+    font-family: 'proximanovacond normal';
+    src: url('/fonts/Demo_Fonts/Fontspring-DEMO-proximanovacond-regular.otf') format("opentype");
+}
+
+@font-face {
+    font-family: 'proximanovacond light';
+    src: url('/fonts/Demo_Fonts/Fontspring-DEMO-proximanovacond-light.otf') format("opentype");
+}
+
+/* animation down arrow */
+
+@-webkit-keyframes mover {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-20px); }
+}
+@keyframes mover {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-20px); }
+}
+
+section {
+    position: relative;
+
+}
+
+/* header nav */
+nav {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position: relative;
+    height: 120px;
+    background-color: #000;
+    color: var(--color-txt);
+}
+
+nav ul {
+    display: flex;
+    gap: 20px;
+    font-family: "proximanovaex exbold";
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+nav ul ul {
+    display: none;
+}
+
+nav li:hover ul {
+    display:block;
+    position: absolute;
+    z-index: 2;
+    padding: 10px;
+    font-family: "proximanovaex bold";
+    font-size: 17px;
+    text-transform: none;
+    background-color: #db0d15;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    color: var(--color-txt);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--color-hover);
+    transition: 0.3s;
+}
+
+ul li ul a:hover {
+    color: #ef9898;
+}
+
+.network {
+    display: flex;
+}
+
+.lang {
+    font-family: "proximanovaex exbold";
+    font-size: 20px;
+}
+
+.pl:hover, .eng:hover {
+    color: var(--color-hover);
+    transition: 0.3s;
+}
+
+.network svg {
+    border-radius: 25px;
+    width: 15px;
+    height: 15px;
+    padding: 12px;
+    border: 1px solid #3a3a3a;
+    text-align: center;
+    margin-right: 4px;
+}
+
+.network svg:hover{
+    border-color:  var(--color-round-header);
+    transition: 0.3s;
+}
+
+#facebook-f:hover,
+#linkedin-in:hover,
+#twitter:hover,
+#XMLID_823_:hover,
+#XMLID_81_:hover,
+#XMLID_17_:hover,
+#Path_251:hover,
+#path3367:hover,
+#glassdoor-svgrepo-com:hover {
+    fill: #db0d15;
+    opacity: 1;
+    transition: 0.3s;
+}
+
+/* movie section */
+
+.movie {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+.movie svg {
+    position: absolute;
+    top: 210px;
+    left: 42%;
+    width: 15%;
+    height: auto;
+}
+
+.movietxt {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    font-family: "proximanovacond exbold";
+    font-size: 39px;
+    color: var(--color-txt);
+    letter-spacing: 7px;
+    line-height: 41px;
+    text-transform: uppercase;
+    text-align: center;
+    top: 380px;
+    z-index: 2;
+}
+
+.down img{
+    position: absolute;
+    z-index: 3;
+    top: 555px;
+    left: 48%;
+    width: 40px;
+    height: auto;
+    -webkit-animation: mover 2s infinite  alternate;
+    animation: mover 2s infinite  alternate;
+}
+
+/* section more */
+
+.more {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    padding-top: 6rem;
+    gap: 2.4rem;
+}
+
+.meet img, .join img {
+    height: auto;
+    filter: brightness(0.6);
+}
+
+.meet, .join {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+      
+.overlay {
+    position: absolute;
+    margin-top: 130px;
+}
+
+.overlay div {
+    font-family: "proximanovaex bold";
+    text-align: center;
+    font-size: 120px;
+    color: transparent;
+    -webkit-text-stroke: 1px var(--color-txt);
+    text-transform: uppercase;
+}
+   
+.btn-more {
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+    padding-top: 10px;
+}
+
+.btn1, .btn2 {
+    width: 225px;
+    height: 50px;
+    margin: 0 10px;
+    padding: 5px 10px;
+    border: 2px solid #ff0000;
+    border-radius: 99px;
+    background-color: transparent;
+    color: var(--color-txt);
+    -webkit-text-stroke: 0px;
+    font-family: "proximanovacond bold";
+    text-transform: uppercase;
+    cursor: pointer;
+    font-size: 17px;
+}
+
+.btn1:hover, .btn2:hover {
+    background-color: #ff0000;
+}
+
+.rulestxt, .jointxt {
+    display: flex;
+    justify-content:space-around;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 2rem 0;
+    color: #000;
+}
+
+.rules1, .rules2, .join1, .join2 {
+    display: block;
+    font-family: "proximanovaex exbold";
+    font-size: 35px;
+    padding-right: 2rem;
+    text-transform: uppercase;
+    line-height: 2.5rem;
+}
+
+.rules2, .join2 {
+    color: var(--color-second-txt);
+}
+
+p {
+    display: block;
+    text-align: start;
+    font-family: "proximanova normal";
+    font-size: 15px;
+    width: 296px;
+    line-height: 25px;
+}
+
+/* section email */
+.letter {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    margin: 40px auto 150px;
+    width: 80%;
+    max-width: 1300px;
+    background-color: #171717;
+}
+
+.letter img {
+    position: absolute;
+    right: -3em;
+    bottom: 45px;
+}
+
+.jobs {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 40px auto 0;
+}
+
+.jobstitle {
+    font-family: "proximanovaex exbold";
+    text-transform: uppercase;
+    display: block;
+    font-size: 55px;
+    color: var(--color-txt); 
+}
+
+.jobs span {
+    font-family: 'proximanovacond normal';
+    font-size: 25px;
+    color: #5d5c5b;
+}
+
+.line {
+    background-color: #fff;
+    display: block;
+    height: 3px;
+    width: 45px;
+    margin: 40px auto 0;
+}
+
+form {
+    width: 80%;
+    padding-bottom: 50px;
+}
+
+.mail {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    border: 1px solid #fff;
+    border-radius: 99px;
+    background-color: #fff;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.btn-mail {
+    border: 1px solid #db0d15;
+    border-radius: 99px;
+    background-color: var(--color-btn);
+    color: #fff;
+    width: 225px;
+    height: 50px;
+    margin: 5px;
+    font-family: 'proximanovaex bold';
+    font-size: 17px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.btn-mail:hover {
+    background-color: #fff;
+    color: #ff0000;
+
+}
+
+input {
+    border-radius: 99px;
+    font-size: 16px;
+    border: none;
+    padding: 10px;
+}
+
+input:focus {
+    outline: none;
+}
+
+::placeholder {
+    font-family: 'proximanovacond normal';
+    opacity: 0.25;
+}
+
+/* section studio */
+.studio {
+    display: flex;
+    justify-content:center;
+    gap: 4rem;
+    padding: 5rem;
+    background-color: #f6f6f6;
+}
+
+.locations {
+    display: flex;
+    flex-direction: column;
+    color: #000;
+    padding-bottom: 30px;
+}
+
+.locations img {
+    width: 471px;
+    height: 145px;
+    object-fit: cover;
+    object-position: 100% 0;
+    filter: brightness(0.5);
+}
+
+.studio h3 {
+    font-family: 'proximanovaex bold';
+    font-size: 45px;
+    text-transform: uppercase;
+    color: var(--color-second-txt);
+}
+
+h3 span {
+    border-bottom: 3px solid #000;
+}
+
+.city {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    max-width: 1000px;
+    gap: 2rem;
+    padding-top: 50px;
+    color: var(--color-txt);
+}
+
+.overlays {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 471px ;
+    margin-top: -8rem;
+    color: var(--color-txt);
+    text-transform: capitalize;
+}
+
+.txtbig {
+    font-family: 'proximanovaex bold';
+    font-size: 25px;
+    margin-bottom: 13px;
+}
+
+.addr, .zipcode {
+    font-family: 'proximanovacond normal';
+    font-size: 16px;
+    line-height: 23px;
+}
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    color: #000;
+}
+
+.contact h3 {
+    margin-bottom: 1rem;
+}
+
+.txt {
+    font-family: 'proximanova semibold';
+    text-transform: capitalize;
+    font-size: 14px;
+    padding-top: 40px;
+    line-height: 25px
+}
+
+.email {
+    font-family: 'proximanovaex bold';
+    font-size: 24px;
+    line-height: 15px;
+}
+
+.email a {
+    color: #171717;
+}
+
+.email a:hover {
+    color: var(--color-hover);
+    }
+
+.btn-contact {
+    border: 1px solid #db0d15;
+    border-radius: 99px;
+    background-color: var(--color-btn);
+    color: var(--color-txt);
+    width: 225px;
+    height: 50px;
+    margin-top: 50px;
+    font-size: 17px;
+    font-family: 'proximanovaex bold';
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-contact:hover {
+    background-color: #fff;
+    color: #ff0000;
+
+}
+
+/* footer */
+footer {
+    background-color: var(--color-bg-footer);
+    padding: 40px 20px;
+}
+
+.menudown {
+    display: flex;
+    justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
+    width: 1320px;
+    align-items: center;
+    color: var(--color-txt);
+}
+
+.menudown ul {
+    display: flex;
+    gap: 20px;
+    font-family: 'proximanovaex bold';
+    font-size: 15px;
+    text-transform: capitalize;
+    color: var(--color-txt);
+}
+
+.menudown ul ul {
+    display: none;
+}
+
+.secondmenu {
+    display: flex;
+    justify-content:space-between;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 1rem;
+    color: #484c53;
+}
+
+.uptop {
+    display: flex;
+    flex-flow: row-reverse;
+    position: sticky;
+    margin-right: 1rem;
+    bottom: 2.5rem;
+    z-index: 50;
+}
+
+.uptop img {
+    width: 40px;
+    height: auto;
+}
+
+.secondmenu a {
+    color: #484c53;
+}
+
+footer img {
+    width: 135px;
+    height: 80px;
+}
+
+@media screen and (max-width: 700px) {
+
+    .movie {
+        height: 700px;
+    }
+
+    .more {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .meet img, .join img {
+        width: 476px;
+        height: 357px;
+    }
+
+    .rulestxt, .jointxt {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 476px;
+    }
+
+    .letter {
+        width: 476px;
+        height: 286px;
+    }
+
+    .studio {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .studio h3 {
+        font-size: 28px;
+    }
+
+    .locations {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content:space-around;
+    }
+}
